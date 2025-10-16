@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quotefy | Cotações Inteligentes, Negócios Eficientes</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <style>
+        /* Variáveis de Cores (Tailwind não usa variáveis CSS diretamente, mas definimos o foco) */
+        :root {
+            --cor-primaria: #FF8C00; /* Laranja Vibrante */
+            --cor-secundaria: #1E90FF; /* Azul para Contraste/CTA */
+        }
+
+        /* Configuração de Fonte Global */
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        /* Estilo Customizado para o Menu Fixo */
+        header {
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+            backdrop-filter: blur(5px);
+            background-color: rgba(255, 255, 255, 0.95);
+        }
+
+        /* Estilo para a animação do Mockup */
+        @keyframes pulse-shadow {
+            0% {
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1), 0 0 0 0 rgba(255, 140, 0, 0.4);
+            }
+            50% {
+                box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15), 0 0 0 10px rgba(255, 140, 0, 0);
+            }
+            100% {
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1), 0 0 0 0 rgba(255, 140, 0, 0.4);
+            }
+        }
+
+        .mockup-placeholder {
+            animation: pulse-shadow 3s infinite;
+        }
+    </style>
+</head>
+<body class="text-gray-800">
+
+    <!-- 1. HEADER (TOPO DA PÁGINA) -->
+    <header class="sticky top-0 z-50 transition duration-300">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center py-4">
+            <a href="#home" class="text-3xl font-extrabold" style="color: var(--cor-primaria);">Quotefy</a>
+            
+            <!-- Menu de Navegação (Escondido em Mobile, visível em Desktop) -->
+            <nav class="hidden md:flex items-center space-x-6">
+                <a href="#home" class="text-gray-600 hover:text-orange-500 font-semibold transition duration-200">Home</a>
+                <a href="#precos" class="text-gray-600 hover:text-orange-500 font-semibold transition duration-200">Preço</a>
+                <a href="#conheca" class="text-gray-600 hover:text-orange-500 font-semibold transition duration-200">Conheça</a>
+            </nav>
+
+            <!-- Botões de Ação -->
+            <div class="flex items-center space-x-3">
+                <a href="URL_LOGIN" class="text-gray-700 hover:text-gray-900 font-semibold hidden sm:inline">Login</a>
+                <a href="#cta-final" class="py-2 px-5 rounded-lg font-bold text-white transition duration-300 transform hover:scale-105" 
+                   style="background-color: var(--cor-secundaria);">
+                    Experimente Grátis
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- 2. HERO SECTION (DESTAQUE PRINCIPAL) -->
+    <section id="home" class="py-16 md:py-24 bg-gray-50">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            
+            <h1 class="text-4xl sm:text-6xl font-extrabold leading-tight mb-4" style="color: var(--cor-primaria);">
+                Cotações Inteligentes, Negócios Eficientes.
+            </h1>
+            <h2 class="text-xl sm:text-2xl font-normal max-w-4xl mx-auto mb-10 text-gray-600">
+                Pare de perder tempo pedindo orçamentos. Envie cotações complexas em 2 minutos, compare as melhores propostas em um painel e compre com o **melhor custo-benefício.**
+            </h2>
+            
+            <a href="#cta-final" class="py-3 px-8 text-lg rounded-full font-extrabold text-white transition duration-300 transform hover:scale-105 shadow-xl" 
+               style="background-color: var(--cor-secundaria);">
+                COMECE AGORA! Experimente o Quotefy Grátis!
+            </a>
+            <p class="mt-4 text-sm text-gray-500">
+                * Sem cartão de crédito. Uso Ilimitado por tempo limitado.
+            </p>
+
+            <!-- Mockup Placeholder -->
+            <div class="mt-16 bg-white border border-gray-200 p-6 rounded-xl mx-auto max-w-5xl mockup-placeholder">
+                <!-- Placeholder de uma UI limpa e comparativa -->
+                <div class="w-full h-80 bg-gray-100 rounded-lg flex items-center justify-center text-gray-500 text-xl font-medium border-4 border-dashed border-orange-200">
+                    [IMAGEM AQUI: Mockup do Painel de Comparação de Preços em destaque]
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. PARA QUEM É? (NICHO E GENÉRICO) -->
+    <section id="nicho" class="py-16">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl md:text-4xl font-extrabold text-center mb-12">
+                Cotação de Produtos... Finalmente de um Jeito Rápido e Certo!
+            </h2>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 md:p-8 rounded-xl shadow-lg transition duration-300 hover:shadow-xl border-t-4" style="border-top-color: var(--cor-primaria);">
+                    <i class="fas fa-car-side text-4xl mb-4" style="color: var(--cor-primaria);"></i>
+                    <h3 class="text-2xl font-bold mb-3">Foco em Autocenters</h3>
+                    <p class="text-gray-600">Cansado de ligar para distribuidoras de peças? Envie a lista exata de peças (com foco em Veículos) para seus fornecedores preferidos e receba os preços **direto no Painel**. Mais agilidade no serviço e satisfação do cliente.</p>
+                </div>
+                
+                <div class="bg-white p-6 md:p-8 rounded-xl shadow-lg transition duration-300 hover:shadow-xl border-t-4" style="border-top-color: var(--cor-secundaria);">
+                    <i class="fas fa-boxes text-4xl mb-4" style="color: var(--cor-secundaria);"></i>
+                    <h3 class="text-2xl font-bold mb-3">Uso Genérico e Flexível</h3>
+                    <p class="text-gray-600">Seja qual for o seu produto (insumos, materiais, serviços), organize suas solicitações em grupos. Nossa plataforma é flexível para você cotar **qualquer item e quantidade**, simplificando a compra em qualquer segmento.</p>
+                </div>
+                
+                <div class="bg-white p-6 md:p-8 rounded-xl shadow-lg transition duration-300 hover:shadow-xl border-t-4" style="border-top-color: var(--cor-primaria);">
+                    <i class="fas fa-wallet text-4xl mb-4" style="color: var(--cor-primaria);"></i>
+                    <h3 class="text-2xl font-bold mb-3">Compre Melhor</h3>
+                    <p class="text-gray-600">Com a comparação lado a lado, você tem a certeza de que está comprando pelo melhor preço. Chega de planilhas e e-mails perdidos. **Organização total** para decisões inteligentes.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. COMO FUNCIONA (CONHEÇA) -->
+    <section id="conheca" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl md:text-4xl font-extrabold text-center mb-16">
+                Como o Quotefy Transforma Suas Compras
+            </h2>
+
+            <div class="relative max-w-4xl mx-auto">
+                <!-- Linha do tempo (somente visual) -->
+                <div class="absolute hidden md:block w-0.5 bg-gray-300 h-full left-1/2 transform -translate-x-1/2"></div>
+                
+                <!-- Passo 1 e 2 -->
+                <div class="md:grid md:grid-cols-2 md:gap-16 items-center mb-16">
+                    <div class="order-1 md:text-right">
+                        <div class="p-6 rounded-xl shadow-lg bg-white border-l-4 border-orange-500">
+                            <i class="fas fa-list-alt text-3xl mb-3" style="color: var(--cor-primaria);"></i>
+                            <h3 class="text-2xl font-bold mb-2">1. Monte a Cotação (e Grupos)</h3>
+                            <p class="text-gray-600">Informe os produtos e quantidades que precisa. Selecione o grupo de fornecedores pré-cadastrados que deseja consultar de forma ágil.</p>
+                        </div>
+                    </div>
+                    <div class="order-2 text-center md:text-left mt-4 md:mt-0">
+                        <div class="w-10 h-10 bg-orange-500 rounded-full text-white flex items-center justify-center mx-auto md:mx-0 md:mr-auto md:ml-0 md:-translate-x-1/2"></div>
+                    </div>
+                </div>
+
+                <!-- Passo 2 e 3 -->
+                <div class="md:grid md:grid-cols-2 md:gap-16 items-center mb-16">
+                    <div class="order-2 md:order-2">
+                        <div class="p-6 rounded-xl shadow-lg bg-white border-l-4 border-blue-500">
+                            <i class="fas fa-envelope-open-text text-3xl mb-3" style="color: var(--cor-secundaria);"></i>
+                            <h3 class="text-2xl font-bold mb-2">2. Envio Automático (E-mail/WhatsApp)</h3>
+                            <p class="text-gray-600">O sistema envia um link único para cada fornecedor. Eles acessam de forma rápida (pelo celular!) e informam o Preço e Frete diretamente.</p>
+                        </div>
+                    </div>
+                    <div class="order-1 md:order-1 text-center md:text-right mt-4 md:mt-0">
+                        <div class="w-10 h-10 bg-blue-500 rounded-full text-white flex items-center justify-center mx-auto md:mx-0 md:ml-auto md:-translate-x-1/2"></div>
+                    </div>
+                </div>
+
+                <!-- Passo 3 e 4 -->
+                <div class="md:grid md:grid-cols-2 md:gap-16 items-center">
+                    <div class="order-1 md:text-right">
+                        <div class="p-6 rounded-xl shadow-lg bg-white border-l-4 border-orange-500">
+                            <i class="fas fa-chart-bar text-3xl mb-3" style="color: var(--cor-primaria);"></i>
+                            <h3 class="text-2xl font-bold mb-2">3. Painel de Melhores Preços</h3>
+                            <p class="text-gray-600">Você recebe alertas. O Quotefy compara as propostas automaticamente em um painel claro, **destacando o menor preço total** e por item, em tempo real.</p>
+                        </div>
+                    </div>
+                    <div class="order-2 text-center md:text-left mt-4 md:mt-0">
+                        <div class="w-10 h-10 bg-orange-500 rounded-full text-white flex items-center justify-center mx-auto md:mx-0 md:mr-auto md:ml-0 md:-translate-x-1/2"></div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <div class="inline-block p-6 rounded-xl shadow-lg bg-white border-t-4 border-blue-500 max-w-lg mx-auto">
+                    <i class="fas fa-thumbs-up text-3xl mb-3" style="color: var(--cor-secundaria);"></i>
+                    <h3 class="text-2xl font-bold mb-2">4. Decisão Inteligente</h3>
+                    <p class="text-gray-600">Escolha a melhor opção: um fornecedor para todos os itens, ou o menor preço de cada item (o Quotefy te mostra a melhor combinação de compra para maximizar sua economia).</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 5. SEÇÃO DE PREÇOS -->
+    <section id="precos" class="py-16 bg-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl md:text-4xl font-extrabold mb-12">
+                Escolha o Plano Ideal para Sua Eficiência
+            </h2>
+
+            <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <!-- Plano Grátis -->
+                <div class="p-8 rounded-xl shadow-2xl transition duration-300 hover:scale-[1.02] border-t-8 border-green-500">
+                    <h3 class="text-2xl font-bold mb-4 text-green-600">Plano Grátis</h3>
+                    <p class="text-5xl font-extrabold mb-2 text-green-600">R$ 0,00</p>
+                    <p class="mb-6 text-gray-500">Perfeito para começar e testar a nossa solução.</p>
+                    <ul class="text-left space-y-3 mb-8">
+                        <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-3"></i> Cadastro Ilimitado de Produtos e Fornecedores.</li>
+                        <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-3"></i> Criação de Grupos de Fornecedores.</li>
+                        <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-3"></i> Envio de Cotações.</li>
+                        <li class="flex items-center text-red-500"><i class="fas fa-times-circle mr-3"></i> Apenas Envio por E-mail.</li>
+                        <li class="flex items-center text-red-500"><i class="fas fa-times-circle mr-3"></i> Limite de X envios por mês.</li>
+                    </ul>
+                    <a href="#cta-final" class="py-3 px-8 rounded-full font-bold text-white transition duration-300 shadow-md w-full block" style="background-color: green; border: 2px solid green;">
+                        Começar Grátis
+                    </a>
+                </div>
+
+                <!-- Plano Pro (Sugestão de Venda) -->
+                <div class="p-8 rounded-xl shadow-2xl transition duration-300 hover:scale-[1.05] border-t-8" style="border-top-color: var(--cor-primaria); background-color: #fffaf0;">
+                    <span class="inline-block py-1 px-3 bg-orange-500 text-white text-xs font-bold rounded-full mb-3">MAIS POPULAR</span>
+                    <h3 class="text-2xl font-bold mb-4" style="color: var(--cor-primaria);">Plano PRO</h3>
+                    <p class="text-5xl font-extrabold mb-2" style="color: var(--cor-primaria);">R$ XX,XX</p>
+                    <p class="mb-6 text-gray-500">Poder total para otimizar suas compras.</p>
+                    <ul class="text-left space-y-3 mb-8">
+                        <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-3"></i> **Tudo do Grátis + Mais!**</li>
+                        <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-3"></i> Envio Ilimitado por E-mail **E WhatsApp.**</li>
+                        <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-3"></i> Relatórios de Economia e Performance.</li>
+                        <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-3"></i> Suporte Prioritário.</li>
+                        <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-3"></i> Sem Limite de Envios Mensais.</li>
+                    </ul>
+                    <a href="URL_COMPRA_PRO" class="py-3 px-8 rounded-full font-bold text-white transition duration-300 shadow-xl w-full block" style="background-color: var(--cor-secundaria); border: 2px solid var(--cor-secundaria);">
+                        Assinar Agora
+                    </a>
+                </div>
+
+                <!-- Plano Enterprise -->
+                <div class="p-8 rounded-xl shadow-2xl transition duration-300 hover:scale-[1.02] border-t-8 border-gray-600">
+                    <h3 class="text-2xl font-bold mb-4 text-gray-700">Enterprise</h3>
+                    <p class="text-5xl font-extrabold mb-2 text-gray-700">Sob Consulta</p>
+                    <p class="mb-6 text-gray-500">Solução customizada para grandes empresas.</p>
+                    <ul class="text-left space-y-3 mb-8">
+                        <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-3"></i> Integração com ERP (API).</li>
+                        <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-3"></i> Múltiplos Usuários e Perfis.</li>
+                        <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-3"></i> Treinamento Dedicado.</li>
+                        <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-3"></i> Consultoria em Compras.</li>
+                        <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-3"></i> SLA Personalizado.</li>
+                    </ul>
+                    <a href="URL_CONTATO_ENTERPRISE" class="py-3 px-8 rounded-full font-bold text-gray-700 transition duration-300 shadow-md w-full block border-2 border-gray-700 hover:bg-gray-100">
+                        Fale Conosco
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. CTA FINAL (Chamada para Ação com Formulário - O destino principal) -->
+    <section id="cta-final" class="py-16 md:py-20 text-white" style="background-color: var(--cor-primaria);">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center space-y-8 md:space-y-0 md:space-x-12">
+            <div class="md:w-1/2 text-center md:text-left">
+                <h2 class="text-3xl md:text-4xl font-extrabold mb-3 leading-tight">
+                    Comece a Economizar e Organizar Suas Cotações Agora!
+                </h2>
+                <p class="text-lg md:text-xl font-medium opacity-90">
+                    Insira seu e-mail e comece a usar o Quotefy na versão gratuita. Leva apenas 30 segundos!
+                </p>
+            </div>
+            
+            <!-- Formulário Simples -->
+            <form action="URL_SUA_API_DE_CADASTRO" method="POST" class="w-full md:w-1/2 bg-white p-6 rounded-xl shadow-2xl">
+                <input type="email" name="email" placeholder="Seu Melhor E-mail" required 
+                       class="w-full p-3 mb-4 text-gray-800 border-2 border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                <button type="submit" class="py-3 px-6 rounded-lg font-extrabold text-white transition duration-300 transform hover:scale-[1.02] shadow-lg w-full" 
+                        style="background-color: var(--cor-secundaria);">
+                    EU QUERO MEU TESTE GRÁTIS!
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- 7. RODAPÉ -->
+    <footer class="bg-gray-800 text-white py-10">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p class="mb-4">
+                <a href="#home" class="hover:text-orange-400 mx-3 transition duration-200">Home</a> | 
+                <a href="#precos" class="hover:text-orange-400 mx-3 transition duration-200">Preço</a> | 
+                <a href="#conheca" class="hover:text-orange-400 mx-3 transition duration-200">Conheça</a> | 
+                <a href="URL_TERMOS" class="hover:text-orange-400 mx-3 transition duration-200">Termos de Uso</a> | 
+                <a href="URL_POLITICA" class="hover:text-orange-400 mx-3 transition duration-200">Política de Privacidade</a>
+            </p>
+            <p class="text-sm text-gray-400">&copy; 2025 Quotefy. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Script para Smooth Scrolling -->
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const href = this.getAttribute('href');
+                if (href && href !== '#') {
+                    e.preventDefault();
+                    const target = document.querySelector(href);
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth'
+                        });
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
