@@ -42,6 +42,13 @@
         .mockup-placeholder {
             animation: pulse-shadow 3s infinite;
         }
+        
+        /* Ajuste para o layout de 4 colunas em desktop */
+        @media (min-width: 1024px) {
+            .grid-cols-4-desktop {
+                grid-template-columns: repeat(4, minmax(0, 1fr));
+            }
+        }
     </style>
 </head>
 <body class="text-gray-800">
@@ -77,7 +84,7 @@
                 Cotações Inteligentes, Negócios Eficientes.
             </h1>
             <h2 class="text-xl sm:text-2xl font-normal max-w-4xl mx-auto mb-10 text-gray-600">
-                Pare de perder tempo pedindo orçamentos. Envie cotações complexas em 2 minutos, compare as melhores propostas em um painel e compre com o **melhor custo-benefício.**
+                Pare de perder tempo pedindo orçamentos. Envie cotações complexas em 2 minutos, compare as melhores propostas em um painel e compre com o <span class="font-extrabold" style="color: var(--cor-secundaria);">melhor custo-benefício.</span>
             </h2>
             
             <a href="#cta-final" class="py-3 px-8 text-lg rounded-full font-extrabold text-white transition duration-300 transform hover:scale-105 shadow-xl" 
@@ -88,11 +95,10 @@
                 * Sem cartão de crédito. Uso Ilimitado por tempo limitado.
             </p>
 
-            <!-- Mockup Placeholder -->
+            <!-- Mockup Placeholder: Ofertas por Fornecedor (Captura 2025-10-16 às 07.27.16.png) -->
             <div class="mt-16 bg-white border border-gray-200 p-6 rounded-xl mx-auto max-w-5xl mockup-placeholder">
-                <!-- Placeholder de uma UI limpa e comparativa -->
                 <div class="w-full h-80 bg-gray-100 rounded-lg flex items-center justify-center text-gray-500 text-xl font-medium border-4 border-dashed border-orange-200">
-                    [IMAGEM AQUI: Mockup do Painel de Comparação de Preços em destaque]
+                    [IMAGEM AQUI: Mockup do Painel de Comparação TOTAL de Propostas - Ofertas por Fornecedor]
                 </div>
             </div>
         </div>
@@ -109,19 +115,19 @@
                 <div class="bg-white p-6 md:p-8 rounded-xl shadow-lg transition duration-300 hover:shadow-xl border-t-4" style="border-top-color: var(--cor-primaria);">
                     <i class="fas fa-car-side text-4xl mb-4" style="color: var(--cor-primaria);"></i>
                     <h3 class="text-2xl font-bold mb-3">Foco em Autocenters</h3>
-                    <p class="text-gray-600">Cansado de ligar para distribuidoras de peças? Envie a lista exata de peças (com foco em Veículos) para seus fornecedores preferidos e receba os preços **direto no Painel**. Mais agilidade no serviço e satisfação do cliente.</p>
+                    <p class="text-gray-600">Cansado de ligar para distribuidoras de peças? Envie a lista exata de peças (com foco em Veículos) para seus fornecedores preferidos e receba os preços <span class="font-bold" style="color: var(--cor-secundaria);">direto no Painel</span>. Mais agilidade no serviço e satisfação do cliente.</p>
                 </div>
                 
                 <div class="bg-white p-6 md:p-8 rounded-xl shadow-lg transition duration-300 hover:shadow-xl border-t-4" style="border-top-color: var(--cor-secundaria);">
                     <i class="fas fa-boxes text-4xl mb-4" style="color: var(--cor-secundaria);"></i>
                     <h3 class="text-2xl font-bold mb-3">Uso Genérico e Flexível</h3>
-                    <p class="text-gray-600">Seja qual for o seu produto (insumos, materiais, serviços), organize suas solicitações em grupos. Nossa plataforma é flexível para você cotar **qualquer item e quantidade**, simplificando a compra em qualquer segmento.</p>
+                    <p class="text-gray-600">Seja qual for o seu produto (insumos, materiais, serviços), organize suas solicitações em grupos. Nossa plataforma é flexível para você cotar <span class="font-bold" style="color: var(--cor-secundaria);">qualquer item e quantidade</span>, simplificando a compra em qualquer segmento.</p>
                 </div>
                 
                 <div class="bg-white p-6 md:p-8 rounded-xl shadow-lg transition duration-300 hover:shadow-xl border-t-4" style="border-top-color: var(--cor-primaria);">
                     <i class="fas fa-wallet text-4xl mb-4" style="color: var(--cor-primaria);"></i>
                     <h3 class="text-2xl font-bold mb-3">Compre Melhor</h3>
-                    <p class="text-gray-600">Com a comparação lado a lado, você tem a certeza de que está comprando pelo melhor preço. Chega de planilhas e e-mails perdidos. **Organização total** para decisões inteligentes.</p>
+                    <p class="text-gray-600">Com a comparação lado a lado, você tem a certeza de que está comprando pelo melhor preço. Chega de planilhas e e-mails perdidos. <span class="font-bold" style="color: var(--cor-secundaria);">Organização total</span> para decisões inteligentes.</p>
                 </div>
             </div>
         </div>
@@ -138,12 +144,12 @@
                 <!-- Linha do tempo (somente visual) -->
                 <div class="absolute hidden md:block w-0.5 bg-gray-300 h-full left-1/2 transform -translate-x-1/2"></div>
                 
-                <!-- Passo 1 e 2 -->
+                <!-- Passo 1 -->
                 <div class="md:grid md:grid-cols-2 md:gap-16 items-center mb-16">
                     <div class="order-1 md:text-right">
                         <div class="p-6 rounded-xl shadow-lg bg-white border-l-4 border-orange-500">
                             <i class="fas fa-list-alt text-3xl mb-3" style="color: var(--cor-primaria);"></i>
-                            <h3 class="text-2xl font-bold mb-2">1. Monte a Cotação (e Grupos)</h3>
+                            <h3 class="text-2xl font-bold mb-2">1. Monte a Cotação</h3>
                             <p class="text-gray-600">Informe os produtos e quantidades que precisa. Selecione o grupo de fornecedores pré-cadastrados que deseja consultar de forma ágil.</p>
                         </div>
                     </div>
@@ -152,7 +158,7 @@
                     </div>
                 </div>
 
-                <!-- Passo 2 e 3 -->
+                <!-- Passo 2 -->
                 <div class="md:grid md:grid-cols-2 md:gap-16 items-center mb-16">
                     <div class="order-2 md:order-2">
                         <div class="p-6 rounded-xl shadow-lg bg-white border-l-4 border-blue-500">
@@ -166,13 +172,13 @@
                     </div>
                 </div>
 
-                <!-- Passo 3 e 4 -->
+                <!-- Passo 3 -->
                 <div class="md:grid md:grid-cols-2 md:gap-16 items-center">
                     <div class="order-1 md:text-right">
                         <div class="p-6 rounded-xl shadow-lg bg-white border-l-4 border-orange-500">
                             <i class="fas fa-chart-bar text-3xl mb-3" style="color: var(--cor-primaria);"></i>
                             <h3 class="text-2xl font-bold mb-2">3. Painel de Melhores Preços</h3>
-                            <p class="text-gray-600">Você recebe alertas. O Quotefy compara as propostas automaticamente em um painel claro, **destacando o menor preço total** e por item, em tempo real.</p>
+                            <p class="text-gray-600">Você recebe alertas. O Quotefy compara as propostas automaticamente em um painel claro, <span class="font-bold" style="color: var(--cor-secundaria);">destacando o menor preço total</span> e por item, em tempo real.</p>
                         </div>
                     </div>
                     <div class="order-2 text-center md:text-left mt-4 md:mt-0">
@@ -192,63 +198,133 @@
         </div>
     </section>
 
-    <!-- 5. SEÇÃO DE PREÇOS -->
-    <section id="precos" class="py-16 bg-white">
+    <!-- 4.1. IMAGE MOCKUP SECTION (Mockups das Telas) -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl md:text-4xl font-extrabold text-center mb-12">
+                Visualização de Dados e Detalhes
+            </h2>
+            <div class="md:flex md:items-center md:space-x-12">
+                <div class="md:w-1/2 mb-10 md:mb-0">
+                    <!-- Placeholder para a primeira imagem: Ofertas por Fornecedor (Captura 2025-10-16 às 07.27.16.png) -->
+                    <img src="https://placehold.co/800x500/FF8C00/ffffff?text=Ofertas+por+Fornecedor" alt="Visualização de Propostas por Fornecedor" class="rounded-xl shadow-2xl border-4 border-gray-100 transform hover:scale-[1.02] transition duration-500" loading="lazy">
+                    <h3 class="text-2xl font-bold text-gray-900 mt-6 mb-2">Comparação Total (Por Fornecedor)</h3>
+                    <p class="text-lg text-gray-600">Visualize todas as propostas de forma consolidada, comparando o preço total e as condições de frete de cada fornecedor em tempo real.</p>
+                </div>
+                <div class="md:w-1/2">
+                    <!-- Placeholder para a segunda imagem: Ofertas por Peça (Captura 2025-10-16 às 07.27.04.png) -->
+                    <img src="https://placehold.co/800x500/1E90FF/ffffff?text=Ofertas+por+Pe%C3%A7a" alt="Detalhes da Cotação por Peça" class="rounded-xl shadow-2xl border-4 border-gray-100 transform hover:scale-[1.02] transition duration-500" loading="lazy">
+                    <h3 class="text-2xl font-bold text-gray-900 mt-6 mb-2">Detalhes por Item Cotado (Por Peça)</h3>
+                    <p class="text-lg text-gray-600">Acesse o detalhe de cada item da sua cotação, vendo o menor preço unitário e a melhor combinação de compra para maximizar sua economia.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. SEÇÃO DE PREÇOS (ATUALIZADA PARA 4 COLUNAS) -->
+    <section id="precos" class="py-16 bg-gray-50">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 class="text-3xl md:text-4xl font-extrabold mb-12">
                 Escolha o Plano Ideal para Sua Eficiência
             </h2>
 
-            <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-                <!-- Plano Grátis -->
-                <div class="p-8 rounded-xl shadow-2xl transition duration-300 hover:scale-[1.02] border-t-8 border-green-500">
-                    <h3 class="text-2xl font-bold mb-4 text-green-600">Plano Grátis</h3>
-                    <p class="text-5xl font-extrabold mb-2 text-green-600">R$ 0,00</p>
-                    <p class="mb-6 text-gray-500">Perfeito para começar e testar a nossa solução.</p>
-                    <ul class="text-left space-y-3 mb-8">
-                        <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-3"></i> Cadastro Ilimitado de Produtos e Fornecedores.</li>
-                        <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-3"></i> Criação de Grupos de Fornecedores.</li>
-                        <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-3"></i> Envio de Cotações.</li>
-                        <li class="flex items-center text-red-500"><i class="fas fa-times-circle mr-3"></i> Apenas Envio por E-mail.</li>
-                        <li class="flex items-center text-red-500"><i class="fas fa-times-circle mr-3"></i> Limite de X envios por mês.</li>
-                    </ul>
+            <!-- Alterado para lg:grid-cols-4 para acomodar os 4 planos -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
+                
+                <!-- Plano 1: Grátis (R$ 0,00) -->
+                <div class="p-8 rounded-xl shadow-xl transition duration-300 hover:scale-[1.02] border-t-8 border-green-500 bg-white flex flex-col h-full justify-between">
+                    <div class="flex-grow">
+                        <div class="h-10"></div> <!-- Reserva de espaço unificada -->
+                        
+                        <h3 class="text-2xl font-bold mb-4 text-green-600">Plano Grátis</h3>
+                        <p class="text-5xl font-extrabold mb-2 text-green-600">R$ 0,00</p>
+                        <p class="mb-6 text-gray-500">Perfeito para começar e testar a nossa solução.</p>
+                        <ul class="text-left space-y-3 mb-8">
+                            <li class="flex items-start"><i class="fas fa-check-circle text-green-500 mr-3 mt-1"></i> Cadastro Ilimitado de Produtos e Fornecedores.</li>
+                            <!-- NOVO ITEM: Limite de 1 Usuário -->
+                            <li class="flex items-start font-bold text-red-600"><i class="fas fa-exclamation-triangle text-red-500 mr-3 mt-1"></i> Limite de 1 Usuário.</li>
+                            <li class="flex items-start"><i class="fas fa-check-circle text-green-500 mr-3 mt-1"></i> Criação de Grupos de Fornecedores.</li>
+                            <li class="flex items-start"><i class="fas fa-check-circle text-green-500 mr-3 mt-1"></i> Envio de Cotações por E-mail e WhatsApp.</li>
+                            <li class="flex items-start font-bold text-red-600"><i class="fas fa-exclamation-triangle text-red-500 mr-3 mt-1"></i> Limite de 20 envios por mês.</li>
+                            <li class="flex items-start text-gray-400"><i class="fas fa-times-circle mr-3 mt-1"></i> Relatórios de Análise.</li>
+                            <li class="flex items-start text-gray-400"><i class="fas fa-times-circle mr-3 mt-1"></i> Múltiplos Usuários.</li>
+                        </ul>
+                    </div>
                     <a href="#cta-final" class="py-3 px-8 rounded-full font-bold text-white transition duration-300 shadow-md w-full block" style="background-color: green; border: 2px solid green;">
                         Começar Grátis
                     </a>
                 </div>
 
-                <!-- Plano Pro (Sugestão de Venda) -->
-                <div class="p-8 rounded-xl shadow-2xl transition duration-300 hover:scale-[1.05] border-t-8" style="border-top-color: var(--cor-primaria); background-color: #fffaf0;">
-                    <span class="inline-block py-1 px-3 bg-orange-500 text-white text-xs font-bold rounded-full mb-3">MAIS POPULAR</span>
-                    <h3 class="text-2xl font-bold mb-4" style="color: var(--cor-primaria);">Plano PRO</h3>
-                    <p class="text-5xl font-extrabold mb-2" style="color: var(--cor-primaria);">R$ XX,XX</p>
-                    <p class="mb-6 text-gray-500">Poder total para otimizar suas compras.</p>
-                    <ul class="text-left space-y-3 mb-8">
-                        <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-3"></i> **Tudo do Grátis + Mais!**</li>
-                        <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-3"></i> Envio Ilimitado por E-mail **E WhatsApp.**</li>
-                        <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-3"></i> Relatórios de Economia e Performance.</li>
-                        <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-3"></i> Suporte Prioritário.</li>
-                        <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-3"></i> Sem Limite de Envios Mensais.</li>
-                    </ul>
-                    <a href="URL_COMPRA_PRO" class="py-3 px-8 rounded-full font-bold text-white transition duration-300 shadow-xl w-full block" style="background-color: var(--cor-secundaria); border: 2px solid var(--cor-secundaria);">
-                        Assinar Agora
+                <!-- Plano 2: Básico (R$ 79,90) - MAIS POPULAR -->
+                <!-- Adicionado 'relative' no cartão e posicionado 'MAIS POPULAR' com 'absolute' -->
+                <div class="p-8 rounded-xl shadow-2xl transition duration-300 hover:scale-[1.05] border-t-8 bg-white flex flex-col h-full justify-between relative" style="border-top-color: var(--cor-secundaria);">
+                    
+                    <!-- ABSOLUTE TAG: MOVIDO PARA A BORDA -->
+                    <div class="absolute top-0 right-0 transform translate-x-1/4 -translate-y-1/2">
+                        <span class="inline-block py-1 px-3 rounded-full text-white font-bold text-xs shadow-lg" style="background-color: var(--cor-secundaria);">MAIS POPULAR</span>
+                    </div>
+
+                    <div class="flex-grow">
+                        <div class="h-10"></div> <!-- Mantém a reserva de espaço (h-10) para alinhar o h3 dos outros planos -->
+                        
+                        <h3 class="text-2xl font-bold mb-4" style="color: var(--cor-secundaria);">Plano Básico</h3>
+                        <p class="text-5xl font-extrabold mb-2" style="color: var(--cor-secundaria);">R$ 79,90</p>
+                        <p class="mb-6 text-gray-500">Para equipes em crescimento e bom volume.</p>
+                        <ul class="text-left space-y-3 mb-8">
+                            <li class="flex items-start"><i class="fas fa-check-circle text-green-500 mr-3 mt-1"></i> Tudo do Grátis.</li>
+                            <li class="flex items-start font-bold text-blue-700"><i class="fas fa-user-friends text-blue-500 mr-3 mt-1"></i> Limite de 2 Usuários.</li>
+                            <li class="flex items-start"><i class="fas fa-check-circle text-green-500 mr-3 mt-1"></i> Envio por E-mail e WhatsApp.</li>
+                            <li class="flex items-start font-bold text-blue-700"><i class="fas fa-paper-plane text-blue-500 mr-3 mt-1"></i> Limite de 200 Envios por Mês.</li>
+                            <li class="flex items-start"><i class="fas fa-check-circle text-green-500 mr-3 mt-1"></i> Suporte Padrão.</li>
+                            <li class="flex items-start text-gray-400"><i class="fas fa-times-circle mr-3 mt-1"></i> Relatórios de Análise.</li>
+                        </ul>
+                    </div>
+                    <a href="URL_COMPRA_BASICO" class="py-3 px-8 rounded-full font-bold text-white transition duration-300 shadow-xl w-full block" style="background-color: var(--cor-primaria); border: 2px solid var(--cor-primaria);">
+                        Assinar R$ 79,90
                     </a>
                 </div>
 
-                <!-- Plano Enterprise -->
-                <div class="p-8 rounded-xl shadow-2xl transition duration-300 hover:scale-[1.02] border-t-8 border-gray-600">
-                    <h3 class="text-2xl font-bold mb-4 text-gray-700">Enterprise</h3>
-                    <p class="text-5xl font-extrabold mb-2 text-gray-700">Sob Consulta</p>
-                    <p class="mb-6 text-gray-500">Solução customizada para grandes empresas.</p>
-                    <ul class="text-left space-y-3 mb-8">
-                        <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-3"></i> Integração com ERP (API).</li>
-                        <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-3"></i> Múltiplos Usuários e Perfis.</li>
-                        <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-3"></i> Treinamento Dedicado.</li>
-                        <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-3"></i> Consultoria em Compras.</li>
-                        <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-3"></i> SLA Personalizado.</li>
-                    </ul>
-                    <a href="URL_CONTATO_ENTERPRISE" class="py-3 px-8 rounded-full font-bold text-gray-700 transition duration-300 shadow-md w-full block border-2 border-gray-700 hover:bg-gray-100">
-                        Fale Conosco
+                <!-- Plano 3: Avançado (R$ 159,90) - RENOMEADO -->
+                <div class="p-8 rounded-xl shadow-xl transition duration-300 hover:scale-[1.02] border-t-8 bg-white flex flex-col h-full justify-between" style="border-top-color: var(--cor-primaria);">
+                    <div class="flex-grow">
+                        <div class="h-10"></div> <!-- Reserva de espaço unificada -->
+                        
+                        <h3 class="text-2xl font-bold mb-4" style="color: var(--cor-primaria);">Plano Avançado</h3> <!-- RENOMEADO -->
+                        <p class="text-5xl font-extrabold mb-2" style="color: var(--cor-primaria);">R$ 159,90</p>
+                        <p class="mb-6 text-gray-500">Otimização completa sem barreiras de volume.</p>
+                        <ul class="text-left space-y-3 mb-8">
+                            <li class="flex items-start"><i class="fas fa-check-circle text-green-500 mr-3 mt-1"></i> Tudo do Básico.</li>
+                            <li class="flex items-start font-bold text-orange-700"><i class="fas fa-user-friends text-orange-500 mr-3 mt-1"></i> Limite de 10 Usuários.</li>
+                            <li class="flex items-start font-bold text-orange-700"><i class="fas fa-infinity text-orange-500 mr-3 mt-1"></i> Envios por E-mail/WhatsApp ILIMITADOS.</li>
+                            <li class="flex items-start"><i class="fas fa-check-circle text-green-500 mr-3 mt-1"></i> API de Integração (Básica).</li>
+                            <li class="flex items-start"><i class="fas fa-check-circle text-green-500 mr-3 mt-1"></i> Suporte Prioritário.</li>
+                            <li class="flex items-start text-gray-400"><i class="fas fa-times-circle mr-3 mt-1"></i> Relatórios de Análise Avançada.</li>
+                        </ul>
+                    </div>
+                    <a href="URL_COMPRA_ILIMITADO" class="py-3 px-8 rounded-full font-bold text-white transition duration-300 shadow-md w-full block" style="background-color: var(--cor-secundaria); border: 2px solid var(--cor-secundaria);">
+                        Assinar R$ 159,90
+                    </a>
+                </div>
+
+                <!-- Plano 4: Ultimate (R$ 199,90) -->
+                <div class="p-8 rounded-xl shadow-xl transition duration-300 hover:scale-[1.02] border-t-8 border-gray-700 bg-white flex flex-col h-full justify-between">
+                    <div class="flex-grow">
+                        <div class="h-10"></div> <!-- Reserva de espaço unificada -->
+
+                        <h3 class="text-2xl font-bold mb-4 text-gray-700">Plano Ultimate</h3>
+                        <p class="text-5xl font-extrabold mb-2 text-gray-700">R$ 199,90</p>
+                        <p class="mb-6 text-gray-500">A solução mais completa e dedicada.</p>
+                        <ul class="text-left space-y-3 mb-8">
+                            <li class="flex items-start"><i class="fas fa-check-circle text-green-500 mr-3 mt-1"></i> Tudo do Avançado.</li>
+                            <li class="flex items-start font-bold text-purple-700"><i class="fas fa-chart-line text-purple-500 mr-3 mt-1"></i> Relatórios de Análise Avançada.</li>
+                            <li class="flex items-start font-bold text-purple-700"><i class="fas fa-headset text-purple-500 mr-3 mt-1"></i> Suporte Prime Dedicado.</li>
+                            <li class="flex items-start"><i class="fas fa-check-circle text-green-500 mr-3 mt-1"></i> Integração ERP Completa.</li>
+                            <li class="flex items-start"><i class="fas fa-check-circle text-green-500 mr-3 mt-1"></i> Gestão de Múltiplos Usuários e Perfis.</li>
+                            <li class="flex items-start font-bold text-gray-700"><i class="fas fa-user-friends text-gray-500 mr-3 mt-1"></i> Usuários Ilimitados.</li>
+                        </ul>
+                    </div>
+                    <a href="URL_COMPRA_ULTIMATE" class="py-3 px-8 rounded-full font-bold text-white transition duration-300 shadow-md w-full block" style="background-color: var(--cor-primaria); border: 2px solid var(--cor-primaria);">
+                        Assinar R$ 199,90
                     </a>
                 </div>
             </div>
